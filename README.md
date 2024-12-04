@@ -1,7 +1,7 @@
-Portfolio-Rico-B
+# Portfolio-Rico-B
 Portfolio
 
-TO DO LIST
+# TO DO LIST
 Speech recognition: If u say: "Go to contacts" it will go to the contacts section.
 
 Add Animations to almost everything: adding Animations to scrolling, clicking, hovering etc.
