@@ -1,0 +1,338 @@
+/* General Styles */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #111111;
+    color: #ffffff;
+}
+
+h1, h2, h3, p {
+    margin: 0;
+    padding: 0;
+}
+
+section {
+    padding: 60px 20px;
+    text-align: center;
+}
+
+/* Welcome Section */
+#welcome {
+    height: 100vh;
+    background-color: #0b4d8f; /* Blue background */
+    color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#welcome h1 {
+    font-size: 3em;
+    margin-bottom: 20px;
+}
+
+#welcome p {
+    font-size: 1.2em;
+    margin-bottom: 30px;
+}
+
+#welcome .btn {
+    background-color: #ffaa00;
+    color: #111111;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+/* Projects Section */
+#projects {
+    padding: 60px 20px;
+    background-color: #333333; /* Gray background */
+    color: #ffffff;
+}
+
+#projects h2 {
+    font-size: 2.5em;
+    margin-bottom: 40px;
+}
+
+/* Use CSS Grid for better layout */
+.project-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Responsive grid */
+    gap: 30px; /* Increased gap between cards */
+    justify-content: center; /* Center the grid items */
+}
+
+.project-card {
+    position: relative; /* Position relative for absolute positioning of pseudo-elements */
+    background-color: #444444; /* Darker background for cards */
+    border-radius: 10px;
+    padding: 30px; /* Increased padding */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3); /* Shadow for depth */
+    text-align: center; /* Center text within cards */
+    display: flex;
+    flex-direction: column; /* Stack content vertically */
+    justify-content: space-between; /* Space between elements */
+    height: 300px; /* Set a fixed height for uniformity */
+    overflow: hidden; /* Ensure pseudo-elements don't overflow */
+    transition: transform 0.3s ease; /* Smooth transition for transform */
+}
+
+/* Pseudo-element for the first snake-like body */
+.project-card::before {
+    content: '';
+    position: absolute;
+    background: linear-gradient(to right, #ffaa00, #ffcc00); /* Gradient color for the snake */
+    border-radius: 5px; /* Slightly rounded edges */
+    width: 80px; /* Width of the snake body (4 times longer) */
+    height: 10px; /* Height of the snake body */
+    top: 0; /* Start at the top */
+    left: 0; /* Start at the left */
+    opacity: 0; /* Initially hidden */
+    transition: opacity 0.3s ease; /* Smooth transition */
+}
+
+/* Pseudo-element for the second snake-like body */
+.project-card::after {
+    content: '';
+    position: absolute;
+    background: linear-gradient(to right, #ffaa00, #ffcc00); /* Gradient color for the snake */
+    border-radius: 5px; /* Slightly rounded edges */
+    width: 80px; /* Width of the snake body (4 times longer) */
+    height: 10px; /* Height of the snake body */
+    top: 0; /* Start at the top */
+    right: 0; /* Start at the right */
+    opacity: 0; /* Initially hidden */
+    transition: opacity 0.3s ease; /* Smooth transition */
+}
+
+/* Snake animation (Anticlockwise) */
+@keyframes snake {
+    0% {
+        top: 0;
+        left: 0;
+        transform: translate(0, 0);
+    }
+    25% {
+        top: 0; /* Keep at top edge */
+        left: 100%; /* Move to right edge */
+        transform: translate(-100%, 0); /* Align the snake to the right edge */
+    }
+    50% {
+        top: 100%; /* Move to bottom edge */
+        left: 100%; /* Keep at right edge */
+        transform: translate(-100%, -100%); /* Align the snake to the bottom edge */
+    }
+    75% {
+        top: 100%; /* Keep at bottom edge */
+        left: 0; /* Move to left edge */
+        transform: translate(0, -100%); /* Align the snake to the left edge */
+    }
+    100% {
+        top: 0; /* Move back to the top edge */
+        left: 0; /* Return to starting position */
+        transform: translate(0, 0);
+    }
+}
+
+/* Snake animation for the second snake (Anticlockwise) */
+@keyframes snake-reverse {
+    0% {
+        top: 0;
+        right: 0;
+        transform: translate(0, 0);
+    }
+    25% {
+        top: 0; /* Keep at top edge */
+        right: 100%; /* Move to left edge */
+        transform: translate(100%, 0); /* Align the snake to the left edge */
+    }
+    50% {
+        top: 100%; /* Move to bottom edge */
+        right: 100%; /* Keep at left edge */
+        transform: translate(100%, -100%); /* Align the snake to the bottom edge */
+    }
+    75% {
+        top: 100%; /* Keep at bottom edge */
+        right: 0; /* Move to right edge */
+        transform: translate(0, -100%); /* Align the snake to the right edge */
+    }
+    100% {
+        top: 0; /* Move back to the top edge */
+        right: 0; /* Return to starting position */
+        transform: translate(0, 0);
+    }
+}
+
+/* Show and animate the first snake on hover */
+.project-card:hover::before {
+    opacity: 1; /* Make the first snake visible */
+    animation: snake 2s linear infinite; /* Snake animation */
+}
+
+/* Show and animate the second snake on hover */
+.project-card:hover::after {
+    opacity: 1; /* Make the second snake visible */
+    animation: snake-reverse 2s linear infinite; /* Snake animation for the second snake */
+}
+
+/* Hover Effect for Project Card */
+.project-card:hover {
+    box-shadow: none; /* Remove default shadow on hover */
+    animation: bounce 1s infinite; /* Bounce animation while hovering */
+}
+
+.project-card img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+.project-card h3 {
+    margin-bottom: 10px;
+    font-size: 1.8em; /* Increased font size for titles */
+    color: #ffaa00; /* Change title color to orange */
+    font-weight: bold;
+}
+
+.project-card p {
+    font-size: 1em;
+    margin-bottom: 20px;
+    color: #ffffff; /* White text for descriptions */
+}
+
+.buttons {
+    display: flex; /* Use flexbox for button alignment */
+    justify-content: center; /* Center buttons */
+    margin-top: auto; /* Push buttons to the bottom */
+}
+
+.view-details {
+    background-color: #ffaa00; /* Yellow background for View Details */
+    color: #ffffff; /* White text */
+    padding: 10px 20px; /* Padding for button */
+    border-radius: 5px; /* Rounded corners */
+    text-decoration: none; /* Remove underline */
+    display: inline-block; /* Allow margin and padding */
+    transition: background-color 0.3s; /* Smooth background transition */
+    margin-right: 10px; /* Space between buttons */
+}
+
+.view-details:hover {
+    background-color: #ff9900; /* Darker yellow on hover */
+}
+
+.project-card .buttons a.blocked {
+    background-color: #cccccc; /* Grey background for Coming Soon */
+    color: #666666; /* Darker grey text */
+    padding: 10px 20px; /* Padding for button */
+    border-radius: 5px; /* Rounded corners */
+    text-decoration: none; /* Remove underline */
+    display: inline-block; /* Allow margin and padding */
+    transition: background-color 0.3s; /* Smooth background transition */
+}
+
+.project-card .buttons a.blocked:hover {
+    background-color: #bbbbbb; /* Darker grey on hover */
+}
+
+/* Skills Section */
+#skills {
+    height: 100vh;
+    background-color: #222222; /* Darker Gray background */
+    color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#skills h2 {
+    font-size: 2.5em;
+    margin-bottom: 40px;
+    font-weight: bold;
+}
+
+.skills-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 80%;
+    max-width: 800px;
+}
+
+.skill-bar {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+}
+
+.skill-bar h3 {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.skill-bar-inner {
+    background-color: #444444;
+    border-radius: 5px;
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+    height: 20px;
+}
+
+.skill-bar-inner::after {
+    content: '';
+    display: block;
+    height: 100%;
+    background: linear-gradient(to right, #ffcc00, #ffaa00);
+    width: 0;
+    animation: loadSkill 2s ease-out forwards;
+}
+
+.skill-bar[data-skill="HTML"] .skill-bar-inner::after {
+    width: 95%;
+}
+
+.skill-bar[data-skill="CSS"] .skill-bar-inner::after {
+    width: 85%;
+}
+
+.skill-bar[data-skill="JavaScript"] .skill-bar-inner::after {
+    width: 80%;
+}
+
+.skill-bar[data-skill="AI"] .skill-bar-inner::after {
+    width: 75%;
+}
+
+.skill-bar[data-skill="PHP"] .skill-bar-inner::after {
+    width: 60%;
+}
+
+.skill-bar[data-skill="p5.js"] .skill-bar-inner::after {
+    width: 35%;
+}
+
+@keyframes loadSkill {
+    from {
+        width: 0;
+    }
+    to {
+        width: var(--width);
+    }
+}
+
+.contact-icon {
+    width: 40px;
+    height: 40px;
+    margin-bottom: 10px;
+    font-size: 24px;
+    color: #ffaa00;
+}
