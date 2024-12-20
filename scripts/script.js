@@ -5,14 +5,13 @@ document.getElementById("viewWorkBtn").addEventListener("click", function () {
     document.getElementById("projects").scrollIntoView({ behavior: "smooth" });
 });
 
+// Add mouse enter and leave events for project cards
 document.querySelectorAll('.project-card').forEach(card => {
     card.addEventListener('mouseenter', () => {
-        card.querySelector('::before').style.opacity = '1'; // Show first snake
-        card.querySelector('::after').style.opacity = '1'; // Show second snake
+        card.style.transform = 'scale(1.05)'; // Slightly enlarge the card
     });
 
     card.addEventListener('mouseleave', () => {
-        card.querySelector('::before').style.opacity = '0'; // Hide first snake
-        card.querySelector('::after').style.opacity = '0'; // Hide second snake
+        card.style.transform = 'scale(1)'; // Reset the card size
     });
 });
