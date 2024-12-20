@@ -5,8 +5,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rico Borgdorff's Portfolio</title>
     <link rel="stylesheet" href="styles/style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/particles.js/2.0.0/particles.min.js"></script>
 </head>
 <body>
+    <div class="rain">
+        <div class="drop"></div>
+        <div class="drop"></div>
+        <div class="drop"></div>
+        <div class="drop"></div>
+        <div class="drop"></div>
+        <div class="drop"></div>
+        <div class="drop"></div>
+        <div class="drop"></div>
+        <div class="drop"></div>
+        <div class="drop"></div>
+    </div>
+    
     <!-- Welcome Section -->
     <section id="welcome">
         <h1>Welcome to My Portfolio</h1>
@@ -14,6 +28,7 @@
         <a href="#projects" class="btn" id="viewWorkBtn">View My Work</a>
     </section>
 
+    <!-- Projects Section -->
     <section id="projects">
         <h2>Projects</h2>
         <div class="project-container">
@@ -26,25 +41,16 @@
                 </div>
             </div>
             
-            <!-- Project 2: F1 Website Fix -->
+            <!-- Project 2: Guess The Number -->
             <div class="project-card">
-                <h3>F1 Website Fix</h3>
-                <p>Fixed the code of a teacher's F1 website project to restore its functionality.</p>
+                <h3>Guess The Number Game</h3>
+                <p>A simple number guessing game built with HTML, CSS, and JavaScript.</p>
                 <div class="buttons">
-                    <a href="https://github.com/RicoPlayzGames/f1-website-fix" target="_blank" class="view-details">View Details</a>
+                    <a href="https://github.com/RicoPlayzGames/Guess-The-Number" target="_blank" class="view-details">View Details</a>
                 </div>
             </div>
             
-            <!-- Project 3: Fast Food Restaurant Website -->
-            <div class="project-card">
-                <h3>Fast Food Restaurant Website</h3>
-                <p>Designed a website for a non-existing fast food restaurant.</p>
-                <div class="buttons">
-                    <a href="https://github.com/RicoPlayzGames/fast-food-restaurant-website" target="_blank" class="view-details">View Details</a>
-                </div>
-            </div>
-            
-            <!-- Project 4: Space Invaders Game -->
+            <!-- Project 3: Space Invaders Game -->
             <div class="project-card">
                 <h3>Project EVE Game</h3>
                 <p>Created a Space Invaders-style game using JavaScript and HTML5 canvas.</p>
@@ -53,7 +59,7 @@
                 </div>
             </div>
             
-            <!-- Project 5: Sound Wave Detector -->
+            <!-- Project 4: Sound Wave Detector -->
             <div class="project-card">
                 <h3>Sound Wave Detector</h3>
                 <p>A tool that visualizes and analyzes sound waves using JavaScript and Web Audio API.</p>
@@ -62,7 +68,7 @@
                 </div>
             </div>
         
-            <!-- Project 6: Google Maps for In-Stores -->
+            <!-- Project 5: Google Maps for In-Stores -->
             <div class="project-card coming-soon">
                 <h3>In-store Navigation System</h3>
                 <p>Work-in-progress project to help users navigate stores and malls in real-time.</p>
@@ -71,7 +77,7 @@
                 </div>
             </div>
         
-            <!-- Project 7: GearRev Ignition Crew+ -->
+            <!-- Project 6: GearRev Ignition Crew+ -->
             <div class="project-card coming-soon">
                 <h3>GearRev Ignition Crew+</h3>
                 <p>An automotive social platform prototype for enthusiasts to connect and share projects.</p>
@@ -82,22 +88,21 @@
         </div>
     </section>
     
-
     <!-- Skills Section -->
     <section id="skills">
         <h2>Skills</h2>
         <div class="skills-container">
             <div class="skill-bar">
                 <h3>HTML</h3>
-                <div class="skill-bar-inner" style="width: 95%"></div>
+                <div class="skill-bar-inner" style="width: 100%"></div>
             </div>
-            <div class="skill-bar">
+            <div class=" skill-bar">
                 <h3>CSS</h3>
                 <div class="skill-bar-inner" style="width: 85%"></div>
             </div>
             <div class="skill-bar">
                 <h3>JavaScript</h3>
-                <div class="skill-bar-inner" style="width: 80%"></div>
+                <div class="skill-bar-inner" style="width: 75%"></div>
             </div>
             <div class="skill-bar">
                 <h3>AI</h3>
@@ -109,7 +114,7 @@
             </div>
             <div class="skill-bar">
                 <h3>p5.js</h3>
-                <div class="skill-bar-inner" style="width: 45%"></div>
+                <div class="skill-bar-inner" style="width: 55%"></div>
             </div>
         </div>
     </section>
@@ -130,14 +135,21 @@
                     <img src="PNG/icons8-discord-50.png" alt="Discord" class="contact-icon">
                 </a>
                 <p>Discord</p>
-                <small>Add me on Discord for discussions, questions and collaboration on projects.</small>
+                <small>Join me on Discord for discussions, questions and collaboration on projects.</small>
             </div>
             <div class="contact-option">
                 <a href="https://github.com/RicoPlayzGames" target="_blank">
                     <img src="PNG/icons8-github-50.png" alt="GitHub" class="contact-icon">
                 </a>
                 <p>GitHub</p>
-                <small>Explore my code on GitHub and contribute to open-source projects.</small>
+                <small>Explore my Projects on GitHub and contribute to open-source projects.</small>
+            </div>
+            <div class="contact-option">
+                <a href="mailto:rico.borgdorff@outlook.com" target="_blank">
+                    <img src="PNG/icons8-outlook-50.png" alt="Outlook" class="contact-icon">
+                </a>
+                <p>Outlook</p>
+                <small>Ask questions, give suggestions or for hiring me thru Outlook.</small>
             </div>
         </div>
     </section>
