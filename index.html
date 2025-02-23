@@ -1,3 +1,4 @@
+<!-- filepath: /c:/Users/ricob/OneDrive/School/Projecten/Portofolio/Index.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,21 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rico Borgdorff's Portfolio</title>
     <link rel="stylesheet" href="styles/style.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/particles.js/2.0.0/particles.min.js"></script>
 </head>
 <body>
-    <div class="rain">
-        <div class="drop"></div>
-        <div class="drop"></div>
-        <div class="drop"></div>
-        <div class="drop"></div>
-        <div class="drop"></div>
-        <div class="drop"></div>
-        <div class="drop"></div>
-        <div class="drop"></div>
-        <div class="drop"></div>
-        <div class="drop"></div>
-    </div>
+    <div id="particles-js"></div>
     
     <!-- Welcome Section -->
     <section id="welcome">
@@ -34,55 +23,111 @@
         <div class="project-container">
             <!-- Project 1: Calculator -->
             <div class="project-card">
-                <h3>Calculator</h3>
-                <p>A simple calculator built with HTML, CSS, and JavaScript.</p>
-                <div class="buttons">
-                    <a href="https://github.com/RicoPlayzGames/calculator" target="_blank" class="view-details">View Details</a>
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <h3>Calculator</h3>
+                        </div>
+                        <div class="flip-card-back">
+                            <h3>Calculator</h3>
+                            <p>A simple calculator built with HTML, CSS, and JavaScript.</p>
+                            <div class="buttons">
+                                <a href="https://github.com/RicoPlayzGames/calculator" target="_blank" class="view-details">View Details</a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
             
             <!-- Project 2: Guess The Number -->
             <div class="project-card">
-                <h3>Guess The Number Game</h3>
-                <p>A simple number guessing game built with HTML, CSS, and JavaScript.</p>
-                <div class="buttons">
-                    <a href="https://github.com/RicoPlayzGames/Guess-The-Number" target="_blank" class="view-details">View Details</a>
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <h3>Guess The Number Game</h3>
+                        </div>
+                        <div class="flip-card-back">
+                            <h3>Guess The Number Game</h3>
+                            <p>A simple number guessing game built with HTML, CSS, and JavaScript.</p>
+                            <div class="buttons">
+                                <a href="https://github.com/RicoPlayzGames/Guess-The-Number" target="_blank" class="view-details">View Details</a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
             
             <!-- Project 3: Space Invaders Game -->
             <div class="project-card">
-                <h3>Project EVE Game</h3>
-                <p>Created a Space Invaders-style game using JavaScript and HTML5 canvas.</p>
-                <div class="buttons">
-                    <a href="https://github.com/strahinjazoranovic/Project-Eve" target="_blank" class="view-details">View Details</a>
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <h3>Project EVE Game</h3>
+                        </div>
+                        <div class="flip-card-back">
+                            <h3>Project EVE Game</h3>
+                            <p>Created a Space Invaders-style game using JavaScript and HTML5 canvas.</p>
+                            <div class="buttons">
+                                <a href="https://github.com/strahinjazoranovic/Project-Eve" target="_blank" class="view-details">View Details</a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
             
             <!-- Project 4: Sound Wave Detector -->
             <div class="project-card">
-                <h3>Sound Wave Detector</h3>
-                <p>A tool that visualizes and analyzes sound waves using JavaScript and Web Audio API.</p>
-                <div class="buttons">
-                    <a href="https://github.com/RicoPlayzGames/sound-wave-detector" target="_blank" class="view-details">View Details</a>
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <h3>Sound Wave Detector</h3>
+                        </div>
+                        <div class="flip-card-back">
+                            <h3>Sound Wave Detector</h3>
+                            <p>A tool that visualizes and analyzes sound waves using JavaScript and Web Audio API.</p>
+                            <div class="buttons">
+                                <a href="https://github.com/RicoPlayzGames/sound-wave-detector" target="_blank" class="view-details">View Details</a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
-        
-            <!-- Project 5: Google Maps for In-Stores -->
+            
+            <!-- Project 5: In-store Navigation System -->
             <div class="project-card coming-soon">
-                <h3>In-store Navigation System</h3>
-                <p>Work-in-progress project to help users navigate stores and malls in real-time.</p>
-                <div class="buttons">
-                    <a href="#" class="blocked">Coming Soon</a> <!-- Blocked Button -->
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <img src="images/LogoProjectS.png" alt="In-store Navigation System" style="width: 250px;height: 250px;">
+                            <h3>In-store Navigation System</h3>
+                        </div>
+                        <div class="flip-card-back">
+                            <h3>In-store Navigation System</h3>
+                            <p>Work-in-progress project to help users navigate stores and malls in real-time.</p>
+                            <div class="buttons">
+                                <a href="#" class="blocked">Coming Soon</a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
-        
+            
             <!-- Project 6: GearRev Ignition Crew+ -->
             <div class="project-card coming-soon">
-                <h3>GearRev Ignition Crew+</h3>
-                <p>An automotive social platform prototype for enthusiasts to connect and share projects.</p>
-                <div class="buttons">
-                    <a href="#" class="blocked">Coming Soon</a> <!-- Blocked Button -->
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <img src="images/GRIC+1.png" alt="Logo GearRev Ignition Crew+" style="width: 250px;height: 250px;">
+                            <h1>GearRev Ignition Crew+</h1>
+                        </div>
+                        <div class="flip-card-back">
+                            <h3>GearRev Ignition Crew+</h3>
+                            <p>An automotive social platform prototype for enthusiasts to connect and share projects.</p>
+                            <div class="buttons">
+                                <a href="#" class="blocked">Coming Soon</a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -105,15 +150,11 @@
                 <div class="skill-bar-inner" style="width: 75%"></div>
             </div>
             <div class="skill-bar">
-                <h3>AI</h3>
-                <div class="skill-bar-inner" style="width: 75%"></div>
-            </div>
-            <div class="skill-bar">
                 <h3>PHP</h3>
                 <div class="skill-bar-inner" style="width: 65%"></div>
             </div>
             <div class="skill-bar">
-                <h3>NodeJS</h3>
+                <h3>Three.js</h3>
                 <div class="skill-bar-inner" style="width: 1%"></div>
             </div>
         </div>
@@ -125,35 +166,35 @@
         <div class="contact-info">
             <div class="contact-option">
                 <a href="https://www.linkedin.com/in/rico-borgdorff-66a006330/" target="_blank">
-                    <img src="PNG/icons8-linkedin-logo-50.png" alt="LinkedIn" class="contact-icon">
+                    <img src="images/icons8-linkedin-logo-50.png" alt="LinkedIn" class="contact-icon">
                 </a>
                 <p>LinkedIn</p>
                 <small>Connect with me professionally on LinkedIn.</small>
             </div>
             <div class="contact-option">
                 <a href="https://discord.gg/rnEBYv96v4" target="_blank">
-                    <img src="PNG/icons8-discord-50.png" alt="Discord" class="contact-icon">
+                    <img src="images/icons8-discord-50.png" alt="Discord" class="contact-icon">
                 </a>
                 <p>Discord</p>
                 <small>Join me on Discord for discussions, questions and collaboration on projects.</small>
             </div>
             <div class="contact-option">
                 <a href="https://github.com/RicoPlayzGames" target="_blank">
-                    <img src="PNG/icons8-github-50.png" alt="GitHub" class="contact-icon">
+                    <img src="images/icons8-github-50.png" alt="GitHub" class="contact-icon">
                 </a>
                 <p>GitHub</p>
                 <small>Explore my Projects on GitHub and contribute to open-source projects.</small>
             </div>
             <div class="contact-option">
                 <a href="mailto:rico.borgdorff@outlook.com" target="_blank">
-                    <img src="PNG/icons8-outlook-50.png" alt="Outlook" class="contact-icon">
+                    <img src="images/icons8-outlook-50.png" alt="Outlook" class="contact-icon">
                 </a>
                 <p>Outlook</p>
                 <small>Ask questions, give suggestions or for hiring me thru Outlook.</small>
             </div>
             <div class="contact-option">
                 <a href="https://teams.live.com/l/invite/FEA7HRzkDXjh-51MwI" target="_blank">
-                    <img src="PNG/icons8-teams-50.png" alt="Teams" class="contact-icon">
+                    <img src="images/icons8-teams-50.png" alt="Teams" class="contact-icon">
                 </a>
                 <p>Teams</p>
                 <small>Discuss with me over projects, suggestions or for business on Teams</small>
@@ -161,6 +202,6 @@
         </div>
     </section>
 
-    <script src="scripts/script.js"></script>
+    <script src="scripts/script.js" type="module"></script>
 </body>
 </html>
