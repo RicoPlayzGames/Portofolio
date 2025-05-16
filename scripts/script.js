@@ -1,5 +1,3 @@
-// script.js
-
 // Scroll to Projects section when button is clicked
 document.getElementById("viewWorkBtn").addEventListener("click", function () {
     document.getElementById("projects").scrollIntoView({ behavior: "smooth" });
