@@ -6,6 +6,17 @@ body {
     color: #ffffff;
 }
 
+/* Ensure the Three.js canvas covers the entire viewport */
+canvas {
+    position: fixed; /* Fix the canvas to the viewport */
+    top: 0;
+    left: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    z-index: -1; /* Place the canvas behind all other content */
+    pointer-events: none; /* Prevent the canvas from interfering with user interactions */
+}
+
 html::-webkit-scrollbar {
     width: 0.4vw;
     background-color: transparent;
@@ -103,13 +114,12 @@ h1, h2, h3, #projects h2, #skills h2 {
 
 .skill-bar h3 {
     font-size: 1.2em;
-    margin-bottom: 10px;
+    margin-bottom: 15px;
     font-weight: bold;
     animation: fadeColor 3s ease-in-out infinite alternate; /* Fade effect for skill titles */
 }
 
 .skill-bar-inner {
-    background-color: #444444;
     border-radius: 5px;
     overflow: hidden;
     position: relative;
@@ -163,14 +173,20 @@ h1, h2, h3, #projects h2, #skills h2 {
     flex-direction: column; /* Stack items vertically */
     align-items: center; /* Center items horizontally */
     justify-content: center; /* Center items vertically */
-    height: 100vh; /* Full height to center vertically */
 }
 
-.contact-container {
+.contact-info {
     display: flex; /* Use flexbox to align items horizontally */
     gap: 20px; /* Space between icons */
     justify-content: center; /* Center the icons within the container */
     margin-top: 20px; /* Add margin to push the icons lower */
+}
+
+.contact-option {
+    display: flex; /* Use flexbox for layout */
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Center items horizontally */
+    text-align: center; /* Center text within the container */
 }
 
 .contact-icon {
@@ -316,4 +332,14 @@ h1, h2, h3, #projects h2, #skills h2 {
 
 .view-details:hover {
     background-color: #ff9900; /* Darker yellow on hover */
+}
+
+/* Footer Styles */
+footer {
+    display: flex; /* Use flexbox for layout */
+    justify-content: center; /* Center the content horizontally */
+    align-items: center; /* Center the content vertically */
+    color: #ffffff; /* Text color for the footer */
+    width: 100%; /* Full width */
+    text-align: center; /* Center the text */
 }
